@@ -113,7 +113,6 @@
             transition: all .5s;
             z-index: 1;
             position: relative;
-            box-shadow: 0 24px 50px rgba(5, 8, 30, .55);
         }
 
         .ai-kit__prompt--prism-automation {
