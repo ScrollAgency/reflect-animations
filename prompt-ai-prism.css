@@ -147,7 +147,7 @@
             height: 1.5rem;
         }
 
-        .ai-kit__prompt-logo img {
+        .ai-kit__prompt-logo svg {
             width: 100%;
             height: 100%;
             object-fit: contain;
