@@ -235,6 +235,7 @@
             min-height: 1.5em;
             flex: 1;
             margin-top: .2em;
+            text-align: left;
         }
 
         .ai-kit__prompt-text::before {
