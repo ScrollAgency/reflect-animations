@@ -622,7 +622,7 @@
         },
         {
                 "id": "use-case-ai-automation",
-                "prompt": "PRISM AI AUTOMATION",
+                "prompt": "PRISM AUTOMATION",
                 "promptVariation": "prism-automation",
                 "response": [
                         {
