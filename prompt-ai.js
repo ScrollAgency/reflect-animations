@@ -730,7 +730,7 @@
                                                         "€60,000"
                                                 ],
                                                 [
-                                                        "Markting Manager",
+                                                        "Marketing Manager",
                                                         "24",
                                                         "€47,000",
                                                         "€54,000",
