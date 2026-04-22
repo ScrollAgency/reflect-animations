@@ -311,7 +311,6 @@
   box-sizing: border-box;
   height: 0;
   overflow: hidden;
-  will-change: transform, opacity;
 }
 
 .ai-module__title {

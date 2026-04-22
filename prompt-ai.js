@@ -495,7 +495,16 @@
             }
             return {
                 init: function () { if (!promptEl || !responseEl) return; resetStage(); },
-                play: function () { if (!scenarios.length || isPlaying) return; isPlaying = true; playScenario(currentIndex); },
+                play: function () {
+                    if (!scenarios.length || isPlaying) return;
+                    isPlaying = true;
+                    if (currentTimeline && currentTimeline.paused()) {
+                        currentTimeline.resume();
+                        if (delayedCall) delayedCall.resume();
+                    } else {
+                        playScenario(currentIndex);
+                    }
+                },
                 pause: function () { isPlaying = false; if (currentTimeline) currentTimeline.pause(); if (delayedCall) delayedCall.pause(); },
                 restart: function () { clearAsync(); currentIndex = 0; isPlaying = true; playScenario(currentIndex); },
                 destroy: function () { isPlaying = false; clearAsync(); resetStage(); }
@@ -768,7 +777,27 @@
                 });
                 if (!aiDemo) return;
                 aiDemo.init();
-                aiDemo.play();
+
+                var root = document.querySelector("#ai-demo");
+                var inView = false;
+
+                if ("IntersectionObserver" in window && root) {
+                    var io = new IntersectionObserver(function (entries) {
+                        inView = entries[0].isIntersecting;
+                        if (inView && !document.hidden) aiDemo.play();
+                        else aiDemo.pause();
+                    }, { threshold: 0.15 });
+                    io.observe(root);
+                } else {
+                    inView = true;
+                    aiDemo.play();
+                }
+
+                document.addEventListener("visibilitychange", function () {
+                    if (document.hidden) aiDemo.pause();
+                    else if (inView) aiDemo.play();
+                });
+
                 window.aiDemo = aiDemo;
             }
 
