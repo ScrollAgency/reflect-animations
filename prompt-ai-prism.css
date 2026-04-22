@@ -122,7 +122,6 @@
   transition: all 0.5s;
   z-index: 1;
   position: relative;
-  box-shadow: 0 30px 50px -30px #a6abe6;
 }
 
 .ai-kit__prompt--prism-automation {
@@ -292,6 +291,8 @@
   justify-content: end;
   position: relative;
   contain: layout style;
+  -webkit-mask-image: linear-gradient(to bottom, transparent 35px, #000 50px);
+          mask-image: linear-gradient(to bottom, transparent 35px, #000 50px);
 }
 
 .ai-kit__pre-response {
