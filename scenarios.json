@@ -1,0 +1,172 @@
+[
+  {
+    "id": "use-case-1",
+    "prompt": "Analyze my Q1 2026 turnover. What are the most common reasons for leaving among employees with less than 2 years of tenure?",
+    "preResponse": [
+      {
+        "type": "source-tags",
+        "content": {
+          "items": [
+            { "label": "HRIS", "icon": "icon-database" },
+            { "label": "Google Forms - Exit surveys", "icon": "icon-docs" }
+          ]
+        }
+      }
+    ],
+    "response": [
+      {
+        "type": "text",
+        "icon": "icon-warning",
+        "content": {
+          "text": "Your turnover rate for Q1 2026 is 18.3%. +2.1pts vs the same period in 2025"
+        }
+      },
+      {
+        "type": "horizontal-barchart",
+        "content": {
+          "title": "Reasons for leaving",
+          "bars": [
+            { "label": "Lack of career growth", "value": 34 },
+            { "label": "Compensation", "value": 22 },
+            { "label": "Management issues", "value": 19 },
+            { "label": "Work-life balance", "value": 14 }
+          ]
+        }
+      },
+      {
+        "type": "text",
+        "content": {
+          "text": "Junior employees under 2 years show 2.4x higher attrition. Consider implementing structured career reviews at the 12-month mark."
+        }
+      }
+    ]
+  },
+  {
+    "id": "use-case-2",
+    "prompt": "I have an annual review with Sarah Martin tomorrow. Give me her full profile and simulate a 5% raise.",
+    "response": [
+      {
+        "type": "employee-card",
+        "content": {
+          "name": "Sarah Martin",
+          "role": "Product Designer",
+          "avatarSrc": "https://cdn.prod.website-files.com/673344f49aefc2db3a07d57a/69d602f077f9c1c90f2bbaee_uifaces-human-avatar.jpg",
+          "team": "Design",
+          "startDate": "March 2023 (3 yrs)",
+          "salary": "€52,000",
+          "lastAnnualReview": "Exceeds expectations"
+        }
+      },
+      {
+        "type": "salary-evolution",
+        "content": {
+          "points": [
+            { "date": "Mar 2023", "value": "€52,000", "change": "", "forecast": false },
+            { "date": "Mar 2024", "value": "€53,040", "change": "+2%", "forecast": false },
+            { "date": "Mar 2025", "value": "€53,040", "change": "=", "forecast": false },
+            { "date": "Mar 2026", "value": "€55,692", "change": "+5%", "forecast": true }
+          ]
+        }
+      },
+      {
+        "type": "text",
+        "content": {
+          "text": "Sarah is 8% below the median for her level. A 5% raise would bring her closer to the 45th percentile."
+        }
+      }
+    ]
+  },
+  {
+    "id": "use-case-ai-automation",
+    "prompt": "PRISM AUTOMATION",
+    "promptVariation": "prism-automation",
+    "response": [
+      {
+        "type": "text",
+        "moduleClass": "warning",
+        "icon": "icon-info",
+        "content": {
+          "text": "12 employees with no assigned manager detected. This may affect reporting accuracy and org chart integrity."
+        }
+      },
+      {
+        "type": "module-ai",
+        "content": {
+          "summary": "12 records",
+          "rows": [
+            {
+              "employee": "Jean Delevoye",
+              "manager": "Empty",
+              "finalManager": "People Ops Lead – Claire Rivière",
+              "avatar": "https://cdn.prod.website-files.com/673344f49aefc2db3a07d57a/69d602f0f0d8b7cfdca66547_jean.png",
+              "department": "Tech",
+              "tone": "warning"
+            },
+            {
+              "employee": "Quitterie Lucas",
+              "manager": "Empty",
+              "finalManager": "Design Manager – Solenne Marchand",
+              "avatar": "https://cdn.prod.website-files.com/673344f49aefc2db3a07d57a/69d602f0bf1b6e80ea1e9353_quitterie.png",
+              "department": "Sale",
+              "tone": "warning"
+            },
+            {
+              "employee": "Thomas Zeinoun",
+              "manager": "Empty",
+              "finalManager": "Finance Head – Karim Chaabane",
+              "avatar": "https://cdn.prod.website-files.com/673344f49aefc2db3a07d57a/69d602f0b99af9582ad7c153_thomas.png",
+              "department": "Data",
+              "tone": "warning"
+            },
+            {
+              "employee": "Sarah Martin",
+              "manager": "Empty",
+              "finalManager": "People Ops Lead – Claire Rivière",
+              "avatar": "https://cdn.prod.website-files.com/673344f49aefc2db3a07d57a/69d602f077f9c1c90f2bbaee_uifaces-human-avatar.jpg",
+              "department": "Tech",
+              "tone": "warning"
+            },
+            {
+              "employee": "Rick Sanchez",
+              "manager": "Empty",
+              "finalManager": "Design Manager – Solenne Marchand",
+              "department": "Sale",
+              "tone": "warning"
+            },
+            {
+              "employee": "Joe Bidjoba",
+              "manager": "Empty",
+              "finalManager": "Finance Head – Karim Chaabane",
+              "department": "Data",
+              "tone": "warning"
+            }
+          ],
+          "cta": { "label": "Fix in Reflect", "variant": "primary" }
+        }
+      }
+    ]
+  },
+  {
+    "id": "use-case-3",
+    "prompt": "Generate my salary grid for pay transparency compliance.",
+    "response": [
+      {
+        "type": "table",
+        "content": {
+          "title": "Salary Grid",
+          "headers": ["Job category", "Population", "Min", "Mid", "Max"],
+          "rows": [
+            ["Software Engineer - Junior", "47", "€42,000", "€48,000", "€55,000"],
+            ["Software Engineer - Senior", "31", "€65,000", "€75,000", "€90,000"],
+            ["HR Business Partner",        "18", "€45,000", "€52,000", "€60,000"],
+            ["Marketing Manager",          "24", "€47,000", "€54,000", "€62,000"]
+          ],
+          "actions": [
+            { "label": "Export as EXCEL", "icon": "icon-download", "variant": "primary" },
+            { "label": "Share",           "icon": "icon-share",    "variant": "ghost" }
+          ]
+        }
+      }
+    ]
+  }
+]
