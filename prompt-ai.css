@@ -259,7 +259,12 @@
 
 @media (max-width: 768px) {
     .ai-kit__prompt-box {
-        min-height: 5.5em;
+        min-height: 5em;
+    }
+
+    .ai-kit__prompt {
+        padding-top: 1em;
+        padding-bottom: 1em;
     }
 }
 
