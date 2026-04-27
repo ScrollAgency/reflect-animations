@@ -113,7 +113,7 @@
     background: var(--color-white);
     border: solid 1px var(--prompt-border-color);
     color: var(--color-black);
-    padding: 0 1.5em;
+    padding: 0.5em 1.5em;
     border-radius: var(--borderRadius-l);
     transition: all .5s;
     z-index: 1;
@@ -142,7 +142,7 @@
 
 .ai-kit__prompt-box {
     flex: 1;
-    min-height: 5em;
+    min-height: 4.5em;
     display: flex;
     align-items: center;
     width: 100%;
@@ -255,6 +255,12 @@
 
 .ai-kit__prompt-text:empty::before {
     opacity: 1;
+}
+
+@media (max-width: 768px) {
+    .ai-kit__prompt-box {
+        min-height: 5.5em;
+    }
 }
 
 @keyframes sendButtonBounce {
