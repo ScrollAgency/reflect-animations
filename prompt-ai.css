@@ -146,8 +146,6 @@
     display: flex;
     align-items: center;
     width: 100%;
-    overflow: hidden;
-    mask-image: linear-gradient(transparent 0%, black 25%);
 }
 
 .ai-kit__prompt-logo {
@@ -240,8 +238,8 @@
     position: relative;
     line-height: 1.5;
     flex: 1;
-    max-height: 3em;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .ai-kit__prompt-text::before {
