@@ -145,7 +145,7 @@
 
 .ai-kit__prompt-box {
   flex: 1;
-  height: 5em;
+  min-height: 5em;
   display: flex;
   align-items: center;
   width: 100%;
@@ -247,7 +247,7 @@
     line-height: 1.5;
     flex: 1;
     max-height: 3em;
-    align-items: flex-end;
+    align-items: center;
 }
 
 .ai-kit__prompt-text::before {
